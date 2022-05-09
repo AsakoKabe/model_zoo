@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 
 from model_zoo import settings
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),

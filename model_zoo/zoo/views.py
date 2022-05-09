@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.urls import reverse_lazy
+from django.views.generic import FormView, ListView, TemplateView
+from zoo.models import ModelCV, RequestCV
 
-from zoo.models import ModelCV
 from . import models
+from .forms import LoadImageForm
 
 
 class ZooHome(ListView):
@@ -12,8 +14,13 @@ class ZooHome(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Model Zoo'
         return context
 
     def get_queryset(self):
         return models.ModelCV.objects.order_by('name')
+
+
+class FaceDetectionPage(FormView):
+    template_name = 'zoo/cv_models/face_detection.html'
+    form_class = LoadImageForm
+    success_url = reverse_lazy("face_detection")
