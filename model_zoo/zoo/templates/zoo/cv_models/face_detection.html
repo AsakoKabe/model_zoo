@@ -6,19 +6,31 @@
 {% block title %}Model Zoo{% endblock %}
 
 {% block stylesheets %}
+    <link href="{% static 'zoo/css/uploadImages.css' %}" rel="stylesheet">
 {% endblock stylesheets %}
 
+
 {% block content %}
+    <div id="drop-area">
+      <form class="my-form"  method="post" enctype="multipart/form-data" >
+          {% csrf_token %}
+<!--            {{ form|crispy }}-->
 
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-       {{ form|crispy }}
+          {% for field in form %}
+                {{ field }}
+                <label class="button" for="id_input_img" >{{ field.label }}</label>
+        {% endfor %}
+<!--        <p>Загрузите изображения с помощью диалога выбора файлов или перетащив нужные изображения в выделенную область</p>-->
+<!--        <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">-->
+<!--        <label class="button" for="fileElem">Выбрать изображения</label>-->
+          <button type="submit" >Upload</button>
+      </form>
+      <div id="foo"></div>
 
-
-      <button type="submit">Upload</button>
-    </form>
+    </div>
 
 {% endblock %}
 
 {% block javascripts %}
+    <script src="{% static 'zoo/js/uploadImages.js' %}"></script>
 {% endblock %}
