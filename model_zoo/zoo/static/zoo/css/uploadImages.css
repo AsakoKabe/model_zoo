@@ -1,43 +1,45 @@
-#drop-area {
-  border: 2px dashed #ccc;
-  border-radius: 20px;
-  width: 480px;
-  font-family: sans-serif;
-  margin: 100px auto;
-  padding: 20px;
-}
-#drop-area.highlight {
-  border-color: purple;
-}
-p {
-  margin-top: 0;
-}
-.my-form {
-  margin-bottom: 10px;
-}
-#gallery {
-  margin-top: 10px;
-}
-#gallery img {
-  width: 150px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-.button {
-  display: inline-block;
-  padding: 10px;
-  background: #ccc;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-.button:hover {
-  background: #ddd;
-}
-#fileElem {
-  display: none;
-}
 #id_input_img {
-    display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
 }
+
+.drop-area {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  border: 5px dashed green;
+  border-radius: 10px;
+}
+
+#input_img_label {
+  background-color: green;
+  right: 5px;
+  bottom: 5px;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+}
+
+
+#input_img_label:hover {
+  background-color: red;
+}
+
+.highlight {
+  border: 5px dashed red;
+}
+
+.form {
+  height: 90%;
+  /*margin-top: 10%;*/
+  /*margin-left: 10%;*/
+}
+

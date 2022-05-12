@@ -12,11 +12,13 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='modelcv',
-            options={'ordering': ['-created_at'], 'verbose_name': 'Модель', 'verbose_name_plural': 'Модели'},
+            options={'ordering': ['-created_at'], 'verbose_name': 'Модель',
+                     'verbose_name_plural': 'Модели'},
         ),
         migrations.AlterModelOptions(
             name='requestcv',
-            options={'ordering': ['-created_at'], 'verbose_name': 'Запрос', 'verbose_name_plural': 'Запросы'},
+            options={'ordering': ['-created_at'], 'verbose_name': 'Запрос',
+                     'verbose_name_plural': 'Запросы'},
         ),
         migrations.AddField(
             model_name='modelcv',

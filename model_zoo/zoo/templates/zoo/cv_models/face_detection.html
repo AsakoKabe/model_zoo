@@ -11,23 +11,22 @@
 
 
 {% block content %}
-    <div id="drop-area">
-      <form class="my-form"  method="post" enctype="multipart/form-data" >
-          {% csrf_token %}
-<!--            {{ form|crispy }}-->
 
-          {% for field in form %}
-                {{ field }}
-                <label class="button" for="id_input_img" >{{ field.label }}</label>
+<div>
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        <div class="drop-area">
+        <p>Загрузить изображение с помощью диалога выбора файлов или перетащив нужное изображение в выделенную область</p>
+         {% for field in form %}
+            <label id="input_img_label" for="{{ field.auto_id  }}">{{ field.label }}</label>
+            {{ field }}
         {% endfor %}
-<!--        <p>Загрузите изображения с помощью диалога выбора файлов или перетащив нужные изображения в выделенную область</p>-->
-<!--        <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">-->
-<!--        <label class="button" for="fileElem">Выбрать изображения</label>-->
-          <button type="submit" >Upload</button>
-      </form>
-      <div id="foo"></div>
+        </div>
+        <button type="submit" >Upload</button>
+    </form>
 
-    </div>
+    <div id="foo"></div>
+</div>
 
 {% endblock %}
 

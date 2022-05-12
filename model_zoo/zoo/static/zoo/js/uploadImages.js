@@ -1,35 +1,29 @@
-let dropArea = document.getElementById('drop-area');
+const dropArea = document.getElementsByClassName("drop-area")[0];
+const fileInput = document.getElementById("id_input_img");
 
-;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-  dropArea.addEventListener(eventName, preventDefaults, false)
-})
-function preventDefaults (e) {
-  e.preventDefault()
-  e.stopPropagation()
-}
+['dragenter', 'dragover'].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false);
+});
+['dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false);
+});
 
-;['dragenter', 'dragover'].forEach(eventName => {
-  dropArea.addEventListener(eventName, highlight, false)
-})
-;['dragleave', 'drop'].forEach(eventName => {
-  dropArea.addEventListener(eventName, unhighlight, false)
-})
-function highlight(e) {
-  dropArea.classList.add('highlight')
+function highlight() {
+    dropArea.classList.add('highlight');
 }
-function unhighlight(e) {
-  dropArea.classList.remove('highlight')
+function unhighlight() {
+    dropArea.classList.remove('highlight');
 }
 
-dropArea.addEventListener('drop', handleDrop, false)
-function handleDrop(e) {
-  let dt = e.dataTransfer
-  let files = dt.files
-  handleFiles(files)
-}
+fileInput.addEventListener("change", () => {
+    if (!fileInput.files || !fileInput.files.length) {
+      return
+    }
+    else {
+      const files = fileInput.files;
+      const foo = document.getElementById("foo");
+      const bar = Array.from(files).map((e) => e.name)
+      foo.innerText = bar.toString()
+    }
+ });
 
-function handleFiles(files) {
-  const foo = document.getElementById("foo");
-  const bar = Array.from(files).map((e) => e.name)
-  foo.innerText = bar.toString()
-}

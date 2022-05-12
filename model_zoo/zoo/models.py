@@ -26,4 +26,3 @@ class RequestCV(models.Model):
         verbose_name = "Запрос"
         verbose_name_plural = "Запросы"
         ordering = ['-created_at']
-

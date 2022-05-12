@@ -1,10 +1,9 @@
-from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import FormView, ListView, TemplateView
-from zoo.models import ModelCV, RequestCV
+from django.views.generic import FormView, ListView
 
 from . import models
 from .forms import LoadImageForm
+from .models import ModelCV
 
 
 class ZooHome(ListView):
