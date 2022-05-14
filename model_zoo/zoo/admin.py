@@ -12,6 +12,6 @@ class ModelCVAdmin(admin.ModelAdmin):
 
 @admin.register(RequestCV)
 class RequestCVVAdmin(admin.ModelAdmin):
-    list_display = ('id', 'input_img', 'response', 'created_at', 'model')
+    list_display = ('id', 'input_img', 'output_img', 'created_at', 'model')
     list_display_links = ('id',)
     search_fields = ('id', 'content')

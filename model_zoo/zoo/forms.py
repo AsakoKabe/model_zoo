@@ -17,7 +17,6 @@ class LoadImageForm(ModelForm):
             "input_img": FileInput(
                 attrs={
                     "id": "id_input_img",
-                    # "onchange": "handleFiles(this.files)",
                     "multiple accept": "image/*",
                 })
         }

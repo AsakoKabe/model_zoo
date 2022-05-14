@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.urls import reverse_lazy, reverse
-from django.views.generic import FormView, ListView, DetailView
+from django.urls import reverse
+from django.views.generic import DetailView, FormView, ListView
 
 from . import models
 from .forms import LoadImageForm
@@ -24,7 +24,7 @@ class FaceDetectionPage(FormView):
 
     def form_valid(self, form) -> HttpResponse:
         request_cv = form.save(commit=False)
-        request_cv.response = request_cv.input_img
+        request_cv.output_img = request_cv.input_img
         request_cv.model_id = ModelCV.objects.get(id=1).pk
         request_cv.save()
         self.obj_id = request_cv.pk
