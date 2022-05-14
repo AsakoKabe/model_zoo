@@ -1,0 +1,15 @@
+figure {
+  margin: 15px 0;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.grayscale {
+  filter: grayscale(0);
+}
+
+.grayscale:hover {
+  filter: grayscale(50%)
+}
