@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.views.generic import DetailView, FormView, ListView
 
+from model_zoo.wsgi import cv_registry
+
 from . import models
 from .forms import LoadImageForm
 from .models import ModelCV, RequestCV
@@ -20,12 +22,16 @@ class FaceDetectionPage(FormView):
     model = RequestCV
     template_name = 'zoo/cv_models/face_detection.html'
     form_class = LoadImageForm
-    # success_url = reverse_lazy("cv_response")
+    id_model = 1
 
     def form_valid(self, form) -> HttpResponse:
         request_cv = form.save(commit=False)
-        request_cv.output_img = request_cv.input_img
-        request_cv.model_id = ModelCV.objects.get(id=1).pk
+        model = cv_registry.get_algorithm_by_id(FaceDetectionPage.id_model)
+        request_cv.model_id = ModelCV.objects.get(
+            id=FaceDetectionPage.id_model
+        ).pk
+        request_cv.save()
+        request_cv.output_img = model.predict(request_cv.input_img.url)
         request_cv.save()
         self.obj_id = request_cv.pk
         return super().form_valid(form)
@@ -45,6 +51,3 @@ class CVResponse(DetailView):
     model = RequestCV
     template_name = 'zoo/cv_models/cv_response.html'
     context_object_name = 'response'
-
-    # def get_queryset(self):
-    #     return models.ModelCV.objects.order_by('name')

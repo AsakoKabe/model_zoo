@@ -18,7 +18,7 @@ class ModelCV(models.Model):
 
 class RequestCV(models.Model):
     input_img = models.ImageField(upload_to="images/%Y/%m/%d/")
-    output_img = models.ImageField(upload_to="images/%Y/%m/%d/")
+    output_img = models.ImageField(upload_to="images/%Y/%m/%d/", default=None)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     model = models.ForeignKey(ModelCV, on_delete=models.CASCADE)
 

@@ -1,12 +1,11 @@
 {% extends 'zoo/base.html' %}
 
 {% load static %}
-{% load crispy_forms_tags %}
 
 {% block title %}Model Zoo / Face Detection{% endblock %}
 
 {% block stylesheets %}
-    <link href="{% static 'zoo/css/cv_response.css' %}" rel="stylesheet">
+    <link href="{% static 'zoo/css/cv_models/cv_response.css' %}" rel="stylesheet">
 {% endblock stylesheets %}
 
 
@@ -16,14 +15,14 @@
   <div class="row">
     <div class="col-sm-6 col-md-4 col-lg-3">
       <figure>
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW5zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" class="img-thumbnail grayscale">
-        <figcaption>Mountain 1</figcaption>
+        <img src={{response.input_img.url}} class="img-thumbnail grayscale">
+        <figcaption>Input</figcaption>
       </figure>
     </div>
     <div class="col-sm-6 col-md-4 col-lg-3">
       <figure>
-        <img src="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW5zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" class="img-thumbnail grayscale">
-        <figcaption>Mountain 2</figcaption>
+        <img src={{response.output_img.url}} class="img-thumbnail grayscale">
+        <figcaption>Prediction</figcaption>
       </figure>
     </div>
   </div>
