@@ -42,8 +42,11 @@ def linters(context, directory=DIRECTORY):
         :param context:
         :param directory:
     """
-    errors = {"pylint": pylint(context, directory), "flake": flake(context, directory),
-              "isort": isort(context, directory)}
+    errors = {
+        # "pylint": pylint(context, directory),
+        "flake": flake(context, directory),
+        "isort": isort(context, directory)
+    }
     for key, value in errors.items():
         if value:
             raise exceptions.Failure(f"Linter {key} failed", "Bad code style")

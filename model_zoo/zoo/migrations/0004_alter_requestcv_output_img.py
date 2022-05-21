@@ -13,6 +13,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='requestcv',
             name='output_img',
-            field=models.ImageField(default=None, upload_to='images/%Y/%m/%d/'),
+            field=models.ImageField(
+                default=None,
+                upload_to='images/%Y/%m/%d/'
+            ),
         ),
     ]
