@@ -11,22 +11,21 @@
 
 {% block content %}
 <!-- bootstrap image gallery 1 -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <figure>
-        <img src={{response.input_img.url}} class="img-thumbnail grayscale">
-        <figcaption>Input</figcaption>
-      </figure>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <figure>
-        <img src={{response.output_img.url}} class="img-thumbnail grayscale">
-        <figcaption>Prediction</figcaption>
-      </figure>
-    </div>
+<div class="d-flex flex-row align-items-center mx-auto">
+  <div class="">
+    <figure >
+      <img src={{response.input_img.url}} class="img-thumbnail grayscale mx-5" width="500px" height="300px">
+      <figcaption>Input</figcaption>
+    </figure>
+  </div>
+  <div class="">
+    <figure>
+      <img src={{response.output_img.url}} class="img-thumbnail grayscale mx-5" width="500px" height="300px">
+      <figcaption>Prediction</figcaption>
+    </figure>
   </div>
 </div>
+
 
 {% endblock %}
 

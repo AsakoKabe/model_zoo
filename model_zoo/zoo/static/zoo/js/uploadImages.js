@@ -21,8 +21,8 @@ fileInput.addEventListener("change", () => {
     }
     else {
       const files = fileInput.files;
-      const foo = document.getElementById("foo");
-      const bar = Array.from(files).map((e) => e.name)
+      const foo = document.getElementById("load_img_name");
+      const bar = Array.from(files).map((e) => e.name.substr(0, 20) + e.name.slice(-4))
       foo.innerText = bar.toString()
     }
  });

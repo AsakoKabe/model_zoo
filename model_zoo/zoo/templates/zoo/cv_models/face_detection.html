@@ -11,20 +11,23 @@
 
 {% block content %}
 
-<div>
+<div class="mx-auto align-items-center">
     <form method="post" enctype="multipart/form-data" class="form">
         {% csrf_token %}
-        <div class="drop-area">
-        <p>Загрузить изображение с помощью диалога выбора файлов или перетащив нужное изображение в выделенную область</p>
-         {% for field in form %}
-            <label id="input_img_label" for="{{ field.auto_id  }}">{{ field.label }}</label>
-            {{ field }}
-        {% endfor %}
+        <div class="drop-area ">
+            <p class="text-center fst-italic text_input">
+                Загрузить изображение с помощью диалога выбора файлов или перетащив нужное изображение в выделенную область
+            </p>
+             {% for field in form %}
+                <label id="input_img_label" for="{{ field.auto_id  }}">{{ field.label }}</label>
+                {{ field }}
+            {% endfor %}
+            <div id="load_img_name"></div>
         </div>
-        <button type="submit" >Upload</button>
+        <button type="submit" class="btn btn-primary btn_submit" >Upload</button>
     </form>
 
-    <div id="foo"></div>
+
 </div>
 
 {% endblock %}

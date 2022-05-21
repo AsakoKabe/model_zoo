@@ -14,3 +14,12 @@ figcaption {
   filter: grayscale(50%)
 }
 
+.my_gallery {
+
+  /*margin-top: 15%;*/
+  /*margin-left: 10%;*/
+}
+
+.my_gallery figcaption {
+  /*text-align: center;*/
+}
