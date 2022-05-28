@@ -1,0 +1,33 @@
+{% extends 'zoo/base.html' %}
+
+{% load static %}
+
+{% block title %}Model Zoo / Face Detection{% endblock %}
+
+{% block stylesheets %}
+    <link href="{% static 'zoo/css/cv_models/cv_response.css' %}" rel="stylesheet">
+{% endblock stylesheets %}
+
+
+{% block content %}
+<!-- bootstrap image gallery 1 -->
+<div class="d-flex flex-row align-items-center mx-auto">
+  <div class="">
+    <figure >
+      <img src={{response.input_img.url}} class="img-thumbnail mx-5 scale" width="700px" height="600px">
+      <figcaption>Input</figcaption>
+    </figure>
+  </div>
+  <div class="">
+    <figure>
+      <img src={{response.output_img.url}} class="img-thumbnail mx-5 scale" width="700px" height="600px">
+      <figcaption>Prediction</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
