@@ -18,17 +18,15 @@ class ZooHome(ListView):
         return models.ModelCV.objects.order_by('name')
 
 
-class FaceDetectionPage(FormView):
+class CVPage(FormView):
     model = RequestCV
-    template_name = 'zoo/cv_models/face_detection.html'
     form_class = LoadImageForm
-    id_model = 1
 
-    def form_valid(self, form) -> HttpResponse:
+    def form_valid(self, form, **kwargs) -> HttpResponse:
         request_cv = form.save(commit=False)
-        model = cv_registry.get_algorithm_by_id(FaceDetectionPage.id_model)
+        model = cv_registry.get_algorithm_by_id(kwargs['id_model'])
         request_cv.model_id = ModelCV.objects.get(
-            id=FaceDetectionPage.id_model
+            id=kwargs['id_model']
         ).pk
         request_cv.save()
         request_cv.output_img = model.predict(request_cv.input_img.url)
@@ -45,6 +43,22 @@ class FaceDetectionPage(FormView):
 
     def get_success_url(self):
         return reverse("model_zoo:cv_response", kwargs={"pk": self.obj_id})
+
+
+class FaceDetectionPage(CVPage):
+    template_name = 'zoo/cv_models/face_detection.html'
+    id_model = 1
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form, id_model=FaceDetectionPage.id_model)
+
+
+class FaceRecognitionPage(CVPage):
+    template_name = 'zoo/cv_models/face_recognition.html'
+    id_model = 2
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form, id_model=FaceRecognitionPage.id_model)
 
 
 class CVResponse(DetailView):

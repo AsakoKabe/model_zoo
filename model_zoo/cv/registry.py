@@ -1,4 +1,5 @@
-from cv.cv_algorithms.face_detection import FaceDetection
+from cv.cv_algorithms.face_detection import FaceDetectionMobileNet
+from cv.cv_algorithms.face_recognition import FaceRecognitionAgeGender
 from zoo.models import ModelCV
 
 
@@ -23,5 +24,6 @@ class CVRegistry:
     @staticmethod
     def __get_matching_models():
         return {
-            'Face Detection': FaceDetection,
+            'Face Detection': FaceDetectionMobileNet,
+            'Face Recognition': FaceRecognitionAgeGender,
         }
