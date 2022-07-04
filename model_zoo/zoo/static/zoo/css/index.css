@@ -1,0 +1,57 @@
+.hr-main{
+    width:50px;
+    border: none;
+    border-bottom: 2px solid rgba(119, 119, 119, 0.25);
+    margin: auto;
+}
+
+body h1{
+    font-weight: 600;
+    text-align: center;
+}
+
+.container{
+    width: 60%;
+    margin: 1rem auto;
+    padding: 2rem;
+    text-align: justify;
+    transition: all 0.3s;
+}
+.container p{
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+    font-size: 30px;
+}
+
+.container p::first-letter{
+    color:#FE5F55;
+    font-weight: bold;
+    /*!*font-size: 100px;*!*/
+    float: left;
+    /*line-height: 60px;*/
+    /*padding-right: 8px;*/
+    /*margin-top: -3px;*/
+}
+
+@media screen and (max-width:600px){
+    .container{
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+.main-info {
+    overflow: auto;
+    width: 100%;
+}
+
+.footer-body {
+    padding: 20px;
+    font-weight: bold;
+    max-width: 100%;
+    /*margin: 0 auto;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

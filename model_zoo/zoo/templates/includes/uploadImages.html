@@ -4,12 +4,13 @@
     <link href="{% static 'zoo/css/uploadImages.css' %}" rel="stylesheet">
 {% endblock stylesheets %}
 
-<div class="mx-auto align-items-center">
+<div class="upload-content">
     <form method="post" enctype="multipart/form-data" class="form">
         {% csrf_token %}
         <div class="drop-area ">
             <p class="text-center fst-italic text_input">
-                Загрузить изображение с помощью диалога выбора файлов или перетащив нужное изображение в выделенную область
+                Upload an image using the file selection dialog or by dragging
+                the desired image to the selected area
             </p>
              {% for field in form %}
                 <label id="input_img_label" for="{{ field.auto_id  }}">{{ field.label }}</label>
