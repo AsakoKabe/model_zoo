@@ -54,9 +54,9 @@ class FaceRecognitionAgeGender(BaseCV):
                                       BaseCV.THICKNESS_SCALE)
 
                 cv2.rectangle(img, (x_min, y_min), (x_max, y_max),
-                              color=(0, 0, 255), thickness=thickness)
+                              color=(0, 255, 0), thickness=thickness)
                 cv2.putText(img, f'{gender}, {age}', (x_min, y_max),
-                            cv2.FONT_HERSHEY_SIMPLEX, font_scale, (0, 255, 0),
+                            cv2.FONT_HERSHEY_SIMPLEX, font_scale, (0, 0, 255),
                             thickness)
 
         return img

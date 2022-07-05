@@ -9,6 +9,8 @@ urlpatterns = [
          name='face_detection'),
     path('face-recognition/', views.FaceRecognitionPage.as_view(),
          name='face_recognition'),
+    path('text-detection/', views.TextDetectionPage.as_view(),
+         name='text-detection'),
     path('cv-response/<int:pk>/', views.CVResponse.as_view(),
          name='cv_response'),
 ]

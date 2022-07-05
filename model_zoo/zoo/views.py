@@ -61,6 +61,14 @@ class FaceRecognitionPage(CVPage):
         return super().form_valid(form, id_model=FaceRecognitionPage.id_model)
 
 
+class TextDetectionPage(CVPage):
+    template_name = 'zoo/cv_models/text_detection.html'
+    id_model = 3
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form, id_model=TextDetectionPage.id_model)
+
+
 class CVResponse(DetailView):
     model = RequestCV
     template_name = 'zoo/cv_models/cv_response.html'
