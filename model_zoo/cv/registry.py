@@ -1,5 +1,8 @@
+from cv.cv_algorithms.colorize_photo import ColorizePhoto
+from cv.cv_algorithms.emotions_recognition import EmotionsRecognition
 from cv.cv_algorithms.face_detection import FaceDetectionMobileNet
 from cv.cv_algorithms.face_recognition import FaceRecognitionAgeGender
+from cv.cv_algorithms.text_detection import TextDetection
 from zoo.models import ModelCV
 
 
@@ -26,4 +29,7 @@ class CVRegistry:
         return {
             'Face Detection': FaceDetectionMobileNet,
             'Face Recognition': FaceRecognitionAgeGender,
+            'Text Detection': TextDetection,
+            'Emotions Recognition': EmotionsRecognition,
+            'Colorize Photo': ColorizePhoto,
         }

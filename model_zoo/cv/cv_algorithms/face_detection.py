@@ -71,7 +71,7 @@ class FaceDetectionMobileNet(BaseFaceDetection):
                 thickness = math.ceil(min(width, height) *
                                       BaseCV.THICKNESS_SCALE)
                 cv2.rectangle(img, (x_min, y_min), (x_max, y_max),
-                              color=(0, 0, 255),
+                              color=(0, 255, 0),
                               thickness=thickness)
 
         return img

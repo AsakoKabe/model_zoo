@@ -61,6 +61,32 @@ class FaceRecognitionPage(CVPage):
         return super().form_valid(form, id_model=FaceRecognitionPage.id_model)
 
 
+class TextDetectionPage(CVPage):
+    template_name = 'zoo/cv_models/text_detection.html'
+    id_model = 3
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form, id_model=TextDetectionPage.id_model)
+
+
+class EmotionsRecognitionPage(CVPage):
+    template_name = 'zoo/cv_models/emotions_recognition.html'
+    id_model = 4
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form,
+                                  id_model=EmotionsRecognitionPage.id_model)
+
+
+class ColorizePhotoPage(CVPage):
+    template_name = 'zoo/cv_models/colorize_photo.html'
+    id_model = 5
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form,
+                                  id_model=ColorizePhotoPage.id_model)
+
+
 class CVResponse(DetailView):
     model = RequestCV
     template_name = 'zoo/cv_models/cv_response.html'

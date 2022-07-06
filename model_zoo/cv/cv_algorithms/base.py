@@ -5,8 +5,8 @@ import cv2
 
 
 class BaseCV(ABC):
-    FONT_SCALE = 2e-3  # Adjust for larger font size in all images
-    THICKNESS_SCALE = 1e-3  # Adjust for larger thickness in all images
+    FONT_SCALE = 4e-3  # Adjust for larger font size in all images
+    THICKNESS_SCALE = 3e-3  # Adjust for larger thickness in all images
 
     def predict(self, path_img):
         path_img = Path(path_img[1::])

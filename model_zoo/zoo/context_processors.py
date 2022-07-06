@@ -5,4 +5,5 @@ def models(request):
     """
     Get models list.
     """
-    return {"models": model.ModelCV.objects.all()}
+    return {"models": sorted(list(model.ModelCV.objects.all()),
+                             key=lambda x: x.name)}
