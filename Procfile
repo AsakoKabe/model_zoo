@@ -1,0 +1,1 @@
+web: gunicorn model_zoo.wsgi --log-file -
