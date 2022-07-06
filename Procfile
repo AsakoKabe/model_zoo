@@ -1,1 +1,1 @@
-web: gunicorn model_zoo.wsgi --log-file -
+web: sh ./run.sh
