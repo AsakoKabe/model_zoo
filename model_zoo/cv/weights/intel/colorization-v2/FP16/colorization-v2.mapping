@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="data_l" output_port_id="data_l" />
+		<IR name="data_l" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="onnx::Div_84" output_port_id="onnx::Div_84" />
+		<IR name="onnx::Div_84" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="input.3" output_port_id="input.3" />
+		<IR name="input.3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_88" output_port_id="onnx::Conv_88" />
+		<IR name="onnx::Conv_88" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model1.2.weight" output_port_id="model1.2.weight" />
+		<IR name="model1.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.7" output_port_id="input.7" />
+		<IR name="input.7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_90" output_port_id="onnx::BatchNormalization_90" />
+		<IR name="onnx::BatchNormalization_90" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.11" output_port_id="input.11" />
+		<IR name="input.11" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model2.0.weight" output_port_id="model2.0.weight" />
+		<IR name="model2.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.15" output_port_id="input.15" />
+		<IR name="input.15" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_93" output_port_id="onnx::Conv_93" />
+		<IR name="onnx::Conv_93" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model2.2.weight" output_port_id="model2.2.weight" />
+		<IR name="model2.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.19" output_port_id="input.19" />
+		<IR name="input.19" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_95" output_port_id="onnx::BatchNormalization_95" />
+		<IR name="onnx::BatchNormalization_95" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.23" output_port_id="input.23" />
+		<IR name="input.23" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model3.0.weight" output_port_id="model3.0.weight" />
+		<IR name="model3.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.27" output_port_id="input.27" />
+		<IR name="input.27" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_98" output_port_id="onnx::Conv_98" />
+		<IR name="onnx::Conv_98" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model3.2.weight" output_port_id="model3.2.weight" />
+		<IR name="model3.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.31" output_port_id="input.31" />
+		<IR name="input.31" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_100" output_port_id="onnx::Conv_100" />
+		<IR name="onnx::Conv_100" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model3.4.weight" output_port_id="model3.4.weight" />
+		<IR name="model3.4.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.35" output_port_id="input.35" />
+		<IR name="input.35" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_102" output_port_id="onnx::BatchNormalization_102" />
+		<IR name="onnx::BatchNormalization_102" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.39" output_port_id="input.39" />
+		<IR name="input.39" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model4.0.weight" output_port_id="model4.0.weight" />
+		<IR name="model4.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.43" output_port_id="input.43" />
+		<IR name="input.43" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_105" output_port_id="onnx::Conv_105" />
+		<IR name="onnx::Conv_105" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model4.2.weight" output_port_id="model4.2.weight" />
+		<IR name="model4.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.47" output_port_id="input.47" />
+		<IR name="input.47" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_107" output_port_id="onnx::Conv_107" />
+		<IR name="onnx::Conv_107" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model4.4.weight" output_port_id="model4.4.weight" />
+		<IR name="model4.4.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.51" output_port_id="input.51" />
+		<IR name="input.51" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_109" output_port_id="onnx::BatchNormalization_109" />
+		<IR name="onnx::BatchNormalization_109" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.55" output_port_id="input.55" />
+		<IR name="input.55" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model5.0.weight" output_port_id="model5.0.weight" />
+		<IR name="model5.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.59" output_port_id="input.59" />
+		<IR name="input.59" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_112" output_port_id="onnx::Conv_112" />
+		<IR name="onnx::Conv_112" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model5.2.weight" output_port_id="model5.2.weight" />
+		<IR name="model5.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.63" output_port_id="input.63" />
+		<IR name="input.63" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_114" output_port_id="onnx::Conv_114" />
+		<IR name="onnx::Conv_114" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model5.4.weight" output_port_id="model5.4.weight" />
+		<IR name="model5.4.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.67" output_port_id="input.67" />
+		<IR name="input.67" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_116" output_port_id="onnx::BatchNormalization_116" />
+		<IR name="onnx::BatchNormalization_116" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.71" output_port_id="input.71" />
+		<IR name="input.71" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model6.0.weight" output_port_id="model6.0.weight" />
+		<IR name="model6.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.75" output_port_id="input.75" />
+		<IR name="input.75" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_119" output_port_id="onnx::Conv_119" />
+		<IR name="onnx::Conv_119" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model6.2.weight" output_port_id="model6.2.weight" />
+		<IR name="model6.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.79" output_port_id="input.79" />
+		<IR name="input.79" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_121" output_port_id="onnx::Conv_121" />
+		<IR name="onnx::Conv_121" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model6.4.weight" output_port_id="model6.4.weight" />
+		<IR name="model6.4.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.83" output_port_id="input.83" />
+		<IR name="input.83" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_123" output_port_id="onnx::BatchNormalization_123" />
+		<IR name="onnx::BatchNormalization_123" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.87" output_port_id="input.87" />
+		<IR name="input.87" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model7.0.weight" output_port_id="model7.0.weight" />
+		<IR name="model7.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.91" output_port_id="input.91" />
+		<IR name="input.91" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_126" output_port_id="onnx::Conv_126" />
+		<IR name="onnx::Conv_126" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model7.2.weight" output_port_id="model7.2.weight" />
+		<IR name="model7.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.95" output_port_id="input.95" />
+		<IR name="input.95" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_128" output_port_id="onnx::Conv_128" />
+		<IR name="onnx::Conv_128" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model7.4.weight" output_port_id="model7.4.weight" />
+		<IR name="model7.4.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.99" output_port_id="input.99" />
+		<IR name="input.99" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::BatchNormalization_130" output_port_id="onnx::BatchNormalization_130" />
+		<IR name="onnx::BatchNormalization_130" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="onnx::ConvTranspose_131" output_port_id="onnx::ConvTranspose_131" />
+		<IR name="onnx::ConvTranspose_131" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model8.0.weight" output_port_id="model8.0.weight" />
+		<IR name="model8.0.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.103" output_port_id="input.103" />
+		<IR name="input.103" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_133" output_port_id="onnx::Conv_133" />
+		<IR name="onnx::Conv_133" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model8.2.weight" output_port_id="model8.2.weight" />
+		<IR name="model8.2.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.107" output_port_id="input.107" />
+		<IR name="input.107" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_135" output_port_id="onnx::Conv_135" />
+		<IR name="onnx::Conv_135" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model8.4.weight" output_port_id="model8.4.weight" />
+		<IR name="model8.4.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.111" output_port_id="input.111" />
+		<IR name="input.111" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Conv_137" output_port_id="onnx::Conv_137" />
+		<IR name="onnx::Conv_137" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="model8.6.weight" output_port_id="model8.6.weight" />
+		<IR name="model8.6.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.115" output_port_id="input.115" />
+		<IR name="input.115" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Softmax_139" output_port_id="onnx::Softmax_139" />
+		<IR name="onnx::Softmax_139" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Transpose_140" output_port_id="onnx::Transpose_140" />
+		<IR name="onnx::Transpose_140" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.119" output_port_id="input.119" />
+		<IR name="input.119" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="model_out.weight" output_port_id="model_out.weight" />
+		<IR name="model_out.weight" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="input.123" output_port_id="input.123" />
+		<IR name="input.123" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="onnx::Resize_150" output_port_id="onnx::Resize_150" />
+		<IR name="onnx::Resize_150" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="onnx::Mul_147" output_port_id="onnx::Mul_147" />
+		<IR name="onnx::Mul_147" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="color_ab" output_port_id="color_ab" />
+		<IR name="color_ab" output_port_id="2" />
+	</map>
+</mapping>
