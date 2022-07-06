@@ -78,6 +78,15 @@ class EmotionsRecognitionPage(CVPage):
                                   id_model=EmotionsRecognitionPage.id_model)
 
 
+class ColorizePhotoPage(CVPage):
+    template_name = 'zoo/cv_models/colorize_photo.html'
+    id_model = 5
+
+    def form_valid(self, form, **kwargs) -> HttpResponse:
+        return super().form_valid(form,
+                                  id_model=ColorizePhotoPage.id_model)
+
+
 class CVResponse(DetailView):
     model = RequestCV
     template_name = 'zoo/cv_models/cv_response.html'

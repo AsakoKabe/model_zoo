@@ -13,6 +13,8 @@ urlpatterns = [
          name='text-detection'),
     path('emotions-recognition/', views.EmotionsRecognitionPage.as_view(),
          name='emotions-recognition'),
+    path('colorize-photo/', views.ColorizePhotoPage.as_view(),
+         name='colorize-photo'),
     path('cv-response/<int:pk>/', views.CVResponse.as_view(),
          name='cv_response'),
 ]
