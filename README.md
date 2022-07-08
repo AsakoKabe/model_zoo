@@ -6,7 +6,7 @@ Computer vision tasks:
 
 - Face Detection
 - Face Recognition (age, gender)
-- Emotions Recognition
+- Emotions Recognition ('neutral', 'happy', 'sad', 'surprise', 'anger')
 - Colorize Photo
 - Text Detection
 
