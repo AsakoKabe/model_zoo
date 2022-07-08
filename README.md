@@ -1,6 +1,6 @@
 # Model Zoo
 
-Django is a web application with the solution of some computer vision problems.
+Django web-app with the solution of some computer vision problems.
 
 Computer vision tasks:
 
